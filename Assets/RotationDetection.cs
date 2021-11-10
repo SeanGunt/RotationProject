@@ -7,10 +7,10 @@ public class RotationDetection : XRSocketInteractor
 {
     public GameObject comparison;
     public override bool CanSelect(XRBaseInteractable args)
-    {   
+    {
         float angle = Quaternion.Angle(comparison.transform.rotation, args.gameObject.transform.rotation);
         Debug.Log(angle);
-        return base.CanSelect(args) && angle<15;
+        return base.CanSelect(args) && angle < 15;
 
     }
     void Start()
@@ -19,6 +19,6 @@ public class RotationDetection : XRSocketInteractor
     }
     void Update()
     {
-        
+
     }
 }
