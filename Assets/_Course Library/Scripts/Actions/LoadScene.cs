@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class LoadScene : MonoBehaviour
 {
-    public void LoadSceneUsingName(string sceneName)
+    public void LoadSceneUsingName(string RotationProject_Interval)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(RotationProject_Interval);
     }
 
     public void ReloadCurrentScene()
