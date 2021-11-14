@@ -28,7 +28,8 @@ public class MatchRotation : MonoBehaviour
         originalRotation = transform.eulerAngles;
         Scene scene = SceneManager.GetActiveScene();
         Debug.Log("Active Scene is '" + scene.name + "'.");
-        if(scene.name == "RotationProject_Interval") {
+        if(scene.name == "RotationProject_Interval") 
+        {
             snapping = true;
         }
     }
