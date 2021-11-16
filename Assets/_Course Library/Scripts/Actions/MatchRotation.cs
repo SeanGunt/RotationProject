@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.XR.Interaction.Toolkit;
 /// <summary>
 /// Match the rotation of the target transform
 /// </summary>
-public class MatchRotation : MonoBehaviour
+public class MatchRotation : XRGrabInteractable
 {
 
     public float stepSize = 15f;
@@ -18,14 +18,12 @@ public class MatchRotation : MonoBehaviour
 
     [Tooltip("Match z rotation")]
     public bool matchZ = false;
-
-    [Tooltip("The transform this object will match")]
-    public Transform targetTransform = null;
-    private Vector3 originalRotation = Vector3.zero;
+    // private Vector3 originalRotation = Vector3.zero;
 
     private void Awake()
     {
-        originalRotation = transform.eulerAngles;
+        base.Awake();
+        // originalRotation = transform.eulerAngles;
         Scene scene = SceneManager.GetActiveScene();
         Debug.Log("Active Scene is '" + scene.name + "'.");
         if(scene.name == "RotationProject_Interval") 
@@ -34,24 +32,24 @@ public class MatchRotation : MonoBehaviour
         }
     }
 
-    public void FollowRotation()
+    protected override void OnSelectExiting(XRBaseInteractor interactor) {
+        Debug.Log("Is "+RotationDetection.hovered + " " + RotationDetection.correct);
+    }
+
+    public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase arg)
     {
-        Vector3 newRotation = targetTransform.eulerAngles;
-        newRotation.x = matchX ? newRotation.x : originalRotation.x;
-        newRotation.y = matchY ? newRotation.y : originalRotation.y;
-        newRotation.z = matchZ ? newRotation.z : (snapping ? Mathf.Round(newRotation.z/stepSize)*stepSize : originalRotation.z);
-        // 15.5 = 15 
-        // 40 / 15
-        // 2.66
-        // 3
-        // 3 * 15 = 45
-        //30 / 15
-        //2
-        //30
-        //32 /15
-        ///2.05
-        // 2 (*15)
-        // 30
-        transform.rotation = Quaternion.Euler(newRotation);
+        // Debug.Log(arg);
+        base.ProcessInteractable(arg);
+        if(arg==XRInteractionUpdateOrder.UpdatePhase.Fixed && selectingInteractor != null) {
+            if (snapping) {
+                Vector3 newRotation = selectingInteractor.transform.rotation.eulerAngles;
+                newRotation.x = matchX ? Mathf.Round(newRotation.x/stepSize)*stepSize : newRotation.x;
+                newRotation.y = matchY ? Mathf.Round(newRotation.y/stepSize)*stepSize : newRotation.y;
+                newRotation.z = matchZ ? Mathf.Round(newRotation.z/stepSize)*stepSize : newRotation.z;
+                transform.rotation = Quaternion.Euler(newRotation);
+            } else {
+                transform.rotation = selectingInteractor.transform.rotation;
+            }
+        }
     }
 }
