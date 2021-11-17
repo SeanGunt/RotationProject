@@ -37,14 +37,14 @@ public class Model_Grabbable_Interval : XRGrabInteractable
         }
 
     }
-    //protected override void OnSelectExiting(XRBaseInteractor interactor)
-    // {
-    //    Debug.Log("Object dropped " + RotationDetection.hovered + ", was successfully placed " + RotationDetection.correct);
-    //    File.AppendAllText(Application.dataPath.ToString() + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + playerId + ".csv",
-    //                playerId + "," +
-    //              SceneManager.GetActiveScene().name + "," + RotationDetection.correct + "," +
-    //               (DateTime.Now - startTime).TotalSeconds.ToString() + Environment.NewLine);
-    // }
+    protected override void OnSelectExiting(XRBaseInteractor interactor)
+     {
+        Debug.Log("Object dropped " + RotationDetection.hovered + ", was successfully placed " + RotationDetection.correct);
+        File.AppendAllText(Application.dataPath.ToString() + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + playerId + ".csv",
+                    playerId + "," +
+                 SceneManager.GetActiveScene().name + "," + RotationDetection.correct + "," +
+                   (DateTime.Now - startTime).TotalSeconds.ToString() + Environment.NewLine);
+     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase arg)
     {
