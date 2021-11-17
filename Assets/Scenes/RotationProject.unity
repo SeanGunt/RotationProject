@@ -256,19 +256,7 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2137448}
-        m_TargetAssemblyTypeName: RotationDetection, Assembly-CSharp
-        m_MethodName: WasCorrect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -371,6 +359,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6ecfc94f94bff07428e46c43ee56f7ae, type: 3}
       propertyPath: m_Name
       value: seanmodel_silhouette
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6ecfc94f94bff07428e46c43ee56f7ae, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6ecfc94f94bff07428e46c43ee56f7ae, type: 3}
       propertyPath: m_IsActive
@@ -1259,7 +1251,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 402787423}
+        m_TargetAssemblyTypeName: Model_Grabbable, Assembly-CSharp
+        m_MethodName: ExitSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -1477,7 +1481,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 407307116}
+        m_TargetAssemblyTypeName: Model_Grabbable, Assembly-CSharp
+        m_MethodName: ExitSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -3232,19 +3248,7 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 867449064}
-        m_TargetAssemblyTypeName: RotationDetection, Assembly-CSharp
-        m_MethodName: WasCorrect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3808,19 +3812,7 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1118379111}
-        m_TargetAssemblyTypeName: RotationDetection, Assembly-CSharp
-        m_MethodName: WasCorrect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4330,7 +4322,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1306860887}
+        m_TargetAssemblyTypeName: Model_Grabbable, Assembly-CSharp
+        m_MethodName: ExitSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -5910,7 +5914,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1488456604}
+        m_TargetAssemblyTypeName: Model_Grabbable, Assembly-CSharp
+        m_MethodName: ExitSelect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -6397,7 +6413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4204724adbcb08847943fa047851ecba, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4204724adbcb08847943fa047851ecba, type: 3}
       propertyPath: m_IsActive
@@ -6562,7 +6578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 141df0b67dfcc9643928844fead1368f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 141df0b67dfcc9643928844fead1368f, type: 3}
       propertyPath: m_IsActive
@@ -6818,18 +6834,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1306860886}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1941544594}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6854,6 +6858,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1306860886}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1641527264}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6868,19 +6884,7 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2080428223}
-        m_TargetAssemblyTypeName: RotationDetection, Assembly-CSharp
-        m_MethodName: WasCorrect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
