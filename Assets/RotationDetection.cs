@@ -14,18 +14,16 @@ public class RotationDetection : XRSocketInteractor
     public override bool CanSelect(XRBaseInteractable args)
     {
         float angle = Quaternion.Angle(comparison.transform.rotation, args.gameObject.transform.rotation);
-        // Debug.Log(angle);
         correct = angle < 15;
         return base.CanSelect(args) && angle < 15;
 
     }
-    public void myHoverEnter(HoverEnterEventArgs arg) {
-        Debug.Log("Hovered");
+    public void myHoverEnter(HoverEnterEventArgs arg) 
+    {
         hovered = true;
     }
-    public void myHoverExit(HoverExitEventArgs arg) {
-        Debug.Log("Hovered exited");
+    public void myHoverExit(HoverExitEventArgs arg) 
+    {
         hovered = false;
     }
-
 }
