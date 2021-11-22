@@ -28,23 +28,24 @@ public class Model_Grabbable_Interval : XRGrabInteractable
         if (!started)
         {
             started = true;
-            playerId = PlayerPrefs.GetInt("player", 0);
-            Debug.Log(SceneManager.GetActiveScene().name);
-            if (SceneManager.GetActiveScene().name != "RotationProject_Interval")
-            {
-                PlayerPrefs.SetInt("player", playerId + 1);
-            }
+            playerId = PlayerPrefs.GetInt("playerId", 0);
+            PlayerPrefs.SetInt("playerId", playerId + 1);
         }
-
     }
-    protected override void OnSelectExiting(XRBaseInteractor interactor)
-     {
+
+    public void ExitSelect(SelectExitEventArgs args)
+    {
+        Debug.Log(args.interactor.gameObject.name);
+        if (args.interactor.gameObject.name == "Socket")
+        {
+            return;
+        }
         Debug.Log("Object dropped " + RotationDetection.hovered + ", was successfully placed " + RotationDetection.correct);
         File.AppendAllText(Application.dataPath.ToString() + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + playerId + ".csv",
-                    playerId + "," +
-                 SceneManager.GetActiveScene().name + "," + RotationDetection.correct + "," +
-                   (DateTime.Now - startTime).TotalSeconds.ToString() + Environment.NewLine);
-     }
+                        playerId + "," +
+                       SceneManager.GetActiveScene().name + "," + RotationDetection.correct + "," +
+                        (DateTime.Now - startTime).TotalSeconds.ToString() + "," + gameObject.name + Environment.NewLine);
+    }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase arg)
     {
