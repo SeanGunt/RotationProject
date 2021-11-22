@@ -8,7 +8,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class RotationDetection : XRSocketInteractor
 {
-    public GameObject comparison;
     public static bool hovered;
     public static bool correct;
     public override bool CanSelect(XRBaseInteractable args)
