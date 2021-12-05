@@ -41,7 +41,7 @@ public class Model_Grabbable_Interval : XRGrabInteractable
             return;
         }
         Debug.Log("Object dropped " + RotationDetection.hovered + ", was successfully placed " + RotationDetection.correct);
-        File.AppendAllText(Application.dataPath.ToString() + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + playerId + ".csv",
+        File.AppendAllText(Application.persistentDataPath.ToString() + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + playerId + ".csv",
                         playerId + "," +
                        SceneManager.GetActiveScene().name + "," + RotationDetection.correct + "," +
                         (DateTime.Now - startTime).TotalSeconds.ToString() + "," + gameObject.name + Environment.NewLine);
